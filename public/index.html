@@ -198,10 +198,15 @@
         content.insertAdjacentHTML('beforeend', card);
       }
       function listUpcomingEvents() {
+        const timeToCalendarMin = new Date();
+        timeToCalendarMin.setHours(00);
+        const timeToCalendarMax = new Date();
+        timeToCalendarMax.setHours(23);
+        timeToCalendarMax.setMinutes(59);
         gapi.client.calendar.events.list({
           'calendarId': 'primary',
-          'timeMin': (new Date()).toISOString(),
-          'showDeleted': false,
+          'timeMin': (timeToCalendarMin).toISOString(),
+          'timeMax': (timeToCalendarMax).toISOString(),
           'singleEvents': true,
           'maxResults': 10,
           'orderBy': 'startTime'
@@ -219,7 +224,7 @@
             if(content.getElementsByTagName('div').length == 0){
               logText.innerHTML = "No tienes eventos fuera de las horas de trabajo.";
             }else{
-              logText.innerHTML = "Eventos de google Calendar fuera de las horas de trabajo";
+              logText.innerHTML = "Eventos de google Calendar de HOY fuera de las horas de trabajo";
               hoursWorked.innerHTML = `Asi que trabajas desde las ${ parseInt(obtainHour(document.getElementById('entrada').value))} hasta las  ${ parseInt(obtainHour(document.getElementById('salida').value))} 🤔`
             }
           } else {
