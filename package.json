@@ -1,0 +1,16 @@
+{
+  "name": "calendarapp",
+  "version": "1.0.0",
+  "description": "Calendar test with google calendar",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Jean Paul Mayorga",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.17.1",
+    "googleapis": "^39.2.0",
+    "react_google_calendar": "^2.2.4444"
+  }
+}
