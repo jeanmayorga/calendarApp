@@ -6,7 +6,7 @@ This app is for a test and have fun with google calendar
 git clone https://github.com/jpmayorga/calendarApp.git
 ```
 
-### Copy the App or Download a zip
+### Or you can Download a zip
 https://github.com/jpmayorga/calendarApp/archive/master.zip
 
 ### Install the App
