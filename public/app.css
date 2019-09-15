@@ -60,3 +60,9 @@ body{
   #hoursWorked{
     font-weight: bold;
   }
+  .disabled{
+    filter: blur(5px);
+    background: rgba(255, 0, 0,.2);
+    height: 30px;
+    overflow: hidden;
+  }
